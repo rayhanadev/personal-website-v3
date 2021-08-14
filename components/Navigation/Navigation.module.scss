@@ -1,0 +1,40 @@
+@use "../../styles/utils/mixins";
+
+.menu {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+
+	ul {
+		margin: auto 0;
+		padding: 0;
+
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: center;
+
+		list-style-type: none;
+
+		li {
+			display: block;
+			margin: 0;
+			@include mixins.fluid-type(padding-left, 320px, 1366px, 1rem, 2.4rem);
+			@include mixins.fluid-type(padding-right, 320px, 1366px, 1rem, 2.4rem);
+
+			@include mixins.fluid-type(font-size, 320px, 1366px, 1.4rem, 2.4rem);
+			// font-size: 2.4rem;
+			font-family: 'Fira Code', monospace;
+
+			a {
+				color: #1D72C0;
+				text-decoration: none;
+
+				&:hover, &:active {
+					color: #155088;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
