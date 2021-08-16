@@ -1,0 +1,19 @@
+@use "../../styles/utils/mixins";
+
+.menu {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	top: 0;
+
+	.menuItems {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		
+		.logo {
+			height: 75px;
+		}
+	}
+}
