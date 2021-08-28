@@ -3,15 +3,15 @@ import Image from 'next/image';
 
 import Head from '../../components/Head/Head.js';
 import Navigation from '../../components/Navigation/Navigation.js';
-import styles from '../../styles/Contact.module.scss';
+import styles from '../../styles/About.module.scss';
 
-export default function Contact() {
+export default function About() {
 	return (
 		<div className="container">
 			<Head />
 			<div className={styles.topBar}>
 				<Navigation />
-				<h1 className={styles.title}>Get in Touch ＼_ﾍ(ω｀●)</h1>
+				<h1 className={styles.title}>About Me</h1>
 			</div>
 		</div>
 	)
