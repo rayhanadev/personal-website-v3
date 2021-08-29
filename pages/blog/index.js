@@ -28,14 +28,15 @@ async function fetcher(...args) {
 
 export default function Blog({ posts, topPosts }) {
 	return (
-		<div className="container">
+		<div className={styles.container}>
 			<Head />
 			<div className={styles.topBar}>
 				<Navigation />
 				<h1 className={styles.title}>Thoughts...</h1>
 				<p className={styles.subtitle}>
 					A blog I've been writing since 2021 detailing my life and what's on my mind,
-					consisting of {posts.length} published posts.
+					a culmination of {posts.length} published posts I hope you enjoy the occasional
+					reading :).
 				</p>
 			</div>
 			<h2 className={styles.sectionHeader}><strong>Top Posts</strong></h2>
@@ -46,7 +47,7 @@ export default function Blog({ posts, topPosts }) {
 							<Link href={'/blog/' + slug}>
 								<div className={styles.post}>
 									<Image
-										src={post.bgimg ?? '/filler.jpg'}
+										src={post.cover ?? '/filler.jpg'}
 										width="100%"
 										height="280px"
 									/>

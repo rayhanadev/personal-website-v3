@@ -8,7 +8,7 @@ import styles from '../../styles/Projects.module.scss';
 
 export default function Projects() {
 	return (
-		<div className="container">
+		<div className={styles.container}>
 			<Head />
 			<div className={styles.topBar}>
 				<Navigation />

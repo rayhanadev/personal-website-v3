@@ -105,7 +105,7 @@
 
 
 			font-family: 'Montserrat', sans-serif;
-			@include mixins.fluid-type(font-size, 320px, 1366px, 2rem, 3rem);
+			@include mixins.fluid-type(font-size, 320px, 1366px, 2rem, 2.8rem);
 		}
 
 		.infoContainer {
@@ -122,7 +122,7 @@
 
 				color: #BBB;
 				font-style: italic;
-				@include mixins.fluid-type(font-size, 320px, 1366px, 1.4rem, 2rem);
+				@include mixins.fluid-type(font-size, 320px, 1366px, 1.4rem, 1.8rem);
 				font-family: 'Montserrat', sans-serif;
 			}
 
@@ -135,7 +135,7 @@
 				color: #BBB;
 				font-style: italic;
 
-				@include mixins.fluid-type(font-size, 320px, 1366px, 1.4rem, 2rem);
+				@include mixins.fluid-type(font-size, 320px, 1366px, 1.4rem, 1.8rem);
 				font-family: 'Montserrat', sans-serif;
 			}
 		}

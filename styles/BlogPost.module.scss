@@ -21,7 +21,8 @@
 
 	font-weight: 400;
 	@include mixins.fluid-type(font-size, 320px, 1366px, 3.2rem, 6rem);
-	text-align: left;
+	text-align: center;
+	color: #155088;
   font-family: 'Fira Code', monospace;
 }
 
@@ -36,6 +37,33 @@
 
 	font-weight: 400;
 	@include mixins.fluid-type(font-size, 320px, 1366px, 1.6rem, 1.8rem);
-	text-align: left;
-  font-family: 'Fira Code', monospace;
+	text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.content {
+	@include mixins.fluid-type(width, 320px, 1366px, 80%, 60%);
+	margin: {
+		top: 0.5rem;
+		bottom: 0;
+	};
+	@include mixins.fluid-type(margin-left, 320px, 1366px, 10%, 20%);
+	@include mixins.fluid-type(margin-right, 320px, 1366px, 10%, 20%);
+
+	font-size: 300%;
+
+	.coverImg {
+		position: relative;
+		height: 280px;
+		width: 100%;
+	}
+
+	* {
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: #1D72C0;
+		font-family: 'Fira Code', monospace;
+	}
 }

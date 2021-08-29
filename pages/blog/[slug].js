@@ -1,10 +1,12 @@
 import React, { useMemo, useEffect } from 'react'
+import Image from 'next/image';
 
 import { getMDXComponent } from 'mdx-bundler/client'
 import { getAllPosts, getSinglePost } from '../../libs/posts.js';
 
 import Head from '../../components/Head/Head.js';
 import Navigation from '../../components/Navigation/Navigation.js';
+import Footer from '../../components/Footer/Footer.js';
 import styles from '../../styles/BlogPost.module.scss';
 
 export const getStaticProps = async ({ params }) => {
@@ -36,7 +38,7 @@ export default function Blog({ frontmatter, code }) {
   }, [frontmatter]);
 
 	return (
-		<div className="container">
+		<div className={styles.container}>
 			<Head />
 			<div className={styles.topBar}>
 				<Navigation />
@@ -46,7 +48,17 @@ export default function Blog({ frontmatter, code }) {
 				</p>
 			</div>
 			
-			<Component />
+			<div className={styles.content}>
+				<div className={styles.coverImg}>			
+					<Image
+						src={ frontmatter.cover ?? '/filler.jpg' }
+						layout="fill"
+					/>
+				</div>
+				<Component />
+			</div>
+
+			<Footer />
 		</div>
 	)
 }

@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import { bundleMDX } from 'mdx-bundler';
 import db from './firebase.js';
 import { asyncMap } from '@arcath/utils';
+import { sassPlugin } from 'esbuild-sass-plugin';
 
 export const POSTS_PATH = path.join(process.cwd(), 'data/_posts');
 

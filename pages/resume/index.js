@@ -8,7 +8,7 @@ import styles from '../../styles/Resume.module.scss';
 
 export default function Resume() {
 	return (
-		<div className="container">
+		<div className={styles.container}>
 			<Head />
 			<div className={styles.topBar}>
 				<Navigation />

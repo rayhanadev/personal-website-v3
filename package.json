@@ -9,6 +9,7 @@
     "@arcath/utils": "^1.6.0",
     "@svgr/webpack": "^5.5.0",
     "esbuild": "^0.12.20",
+    "esbuild-sass-plugin": "^1.5.2",
     "firebase-admin": "^9.11.1",
     "gray-matter": "^4.0.3",
     "mdx-bundler": "^6.0.1",
