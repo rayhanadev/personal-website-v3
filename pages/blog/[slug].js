@@ -1,5 +1,6 @@
 import React, { useMemo, useEffect } from 'react'
 import Image from 'next/image';
+import useSWR from 'swr';
 
 import { getMDXComponent } from 'mdx-bundler/client'
 import { getAllPosts, getSinglePost } from '../../libs/posts.js';
@@ -25,8 +26,15 @@ export const getStaticPaths = async () => {
   };
 };
 
+async function fetcher(...args) {
+  const res = await fetch(...args);
+  return res.json();
+}
+
 export default function Blog({ frontmatter, code }) {
 	const Component = useMemo(() => getMDXComponent(code), [code])
+  const { data } = useSWR(`/api/views/${frontmatter.slug}`, fetcher);
+  const views = new Number(data?.total);
 
   useEffect(() => {
     const registerView = () =>
@@ -55,7 +63,16 @@ export default function Blog({ frontmatter, code }) {
 						layout="fill"
 					/>
 				</div>
+				<div className={styles.info}>
+					<p>Ray Arayilakath / { new Date(frontmatter.publishedAt).toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }</p>
+					<p>{ frontmatter.readTime ? frontmatter.readTime + 'mins • ' : ''}{ views + ' views'}</p>
+				</div>
 				<Component />
+				<p className={styles.metaInfo}>
+					<a href={ 'https://twitter.com/search?q=https%3A%2F%2Frayhanadev.vercel.app%2Fblog%2F' + frontmatter.slug }>Discuss on Twitter</a>
+					{' • '}
+					<a href={ 'https://github.com/rayhanadev/personal-website/edit/master/data/_posts/' + frontmatter.slug + '.mdx' }>Edit on Github</a>
+				</p>
 			</div>
 
 			<Footer />

@@ -58,6 +58,27 @@
 		width: 100%;
 	}
 
+	.info {
+		width: 60%;
+		margin: 0 auto;
+
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: space-between;
+	}
+
+	.metaInfo {
+		margin-top: 100px;
+		width: 100%;
+		
+		a {
+			font-size: 1.6rem;
+			color: #333;
+			text-decoration: none;
+		}
+	}
+
 	* {
 		font-family: 'Montserrat', sans-serif;
 	}
