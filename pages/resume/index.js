@@ -9,7 +9,7 @@ import styles from '../../styles/Resume.module.scss';
 export default function Resume() {
 	return (
 		<div className={styles.container}>
-			<Head />
+			<Head title="Resume" />
 			<div className={styles.topBar}>
 				<Navigation />
 				<h1 className={styles.title}>My Resume ＼_ﾍ(ω｀●)</h1>

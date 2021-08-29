@@ -47,7 +47,7 @@ export default function Blog({ frontmatter, code }) {
 
 	return (
 		<div className={styles.container}>
-			<Head />
+			<Head title={ frontmatter.title } />
 			<div className={styles.topBar}>
 				<Navigation />
 				<h1 className={styles.title}>{frontmatter.title}</h1>

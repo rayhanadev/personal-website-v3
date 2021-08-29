@@ -59,13 +59,13 @@
 	}
 
 	.info {
-		width: 60%;
 		margin: 0 auto;
 
 		display: flex;
 		flex-wrap: wrap;
 		align-content: center;
 		justify-content: space-between;
+		@include mixins.fluid-type(font-size, 320px, 1366px, 1.4rem, 1.8rem);
 	}
 
 	.metaInfo {

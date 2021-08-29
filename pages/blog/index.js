@@ -29,7 +29,7 @@ async function fetcher(...args) {
 export default function Blog({ posts, topPosts }) {
 	return (
 		<div className={styles.container}>
-			<Head />
+			<Head title="Thoughts..." />
 			<div className={styles.topBar}>
 				<Navigation />
 				<h1 className={styles.title}>Thoughts...</h1>

@@ -9,7 +9,7 @@ import styles from '../../styles/Projects.module.scss';
 export default function Projects() {
 	return (
 		<div className={styles.container}>
-			<Head />
+			<Head title="Projects" />
 			<div className={styles.topBar}>
 				<Navigation />
 				<h1 className={styles.title}>Projects ＼_ﾍ(ω｀●)</h1>
