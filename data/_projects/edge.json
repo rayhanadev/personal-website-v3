@@ -1,0 +1,10 @@
+{
+	"title": "edge",
+	"description": "A super simple file host written in NodeJS running an Express server. Features MIME checking, in-browser previews, and secure login and uploading via ReplAuth.",
+	"publishedAt": "2021-08-14",
+	"hasLink": true,
+	"link": "https://edge.rayhanadev.repl.co/",
+	"hasCode": true,
+	"code": "https://github.com/rayhanadev/edge",
+	"cover": "/projects/edge.jpg"
+}

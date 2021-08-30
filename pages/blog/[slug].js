@@ -34,7 +34,7 @@ async function fetcher(...args) {
 export default function Blog({ frontmatter, code }) {
 	const Component = useMemo(() => getMDXComponent(code), [code])
   const { data } = useSWR(`/api/views/${frontmatter.slug}`, fetcher);
-  const views = new Number(data?.total);
+  const views = new Number(data?.total) || '---';
 
   useEffect(() => {
     const registerView = () =>
@@ -60,6 +60,7 @@ export default function Blog({ frontmatter, code }) {
 				<div className={styles.coverImg}>			
 					<Image
 						src={ frontmatter.cover ?? '/filler.jpg' }
+						alt="cover image"
 						layout="fill"
 					/>
 				</div>

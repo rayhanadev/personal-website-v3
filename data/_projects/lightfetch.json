@@ -1,0 +1,9 @@
+{
+	"title": "LightFetch",
+	"description": "A tiny NodeJS package for HTTPS requests. Features built-in Content header identification, cookie-parsing, and tiny bundles sizes without any dependencies.",
+	"publishedAt": "2021-07-24",
+	"hasLink": false,
+	"hasCode": true,
+	"code": "https://github.com/rayhanadev/lightfetch",
+	"cover": "/projects/lightfetch.jpg"
+}

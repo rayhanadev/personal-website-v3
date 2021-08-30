@@ -1,0 +1,9 @@
+{
+	"title": "Amazon CLI",
+	"description": "Ever had that moment when you’re coding and then you think Wait, I really need this Amazon thing, but are too lazy to navigate to Amazon? Well this NodeJS project uses an Amazon Scraper to make getting Amazon products easy from the comfort of your console!",
+	"publishedAt": "2020-11-06",
+	"hasLink": false,
+	"hasCode": true,
+	"code": "https://github.com/RayhanADev/Amazon-CLI",
+	"cover": "/projects/amazon-cli.jpg"
+}

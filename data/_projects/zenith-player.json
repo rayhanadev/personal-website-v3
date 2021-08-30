@@ -1,0 +1,10 @@
+{
+	"title": "The Zenith Player",
+	"description": "A music player built using React, a download tool created with ytdl-core, and a PWA powered by Google Workbox providing a rich music experience for anyone!",
+	"publishedAt": "2021-08-14",
+	"hasLink": true,
+	"link": "https://zenith-player.vercel.app",
+	"hasCode": true,
+	"code": "https://github.com/rayhanadev/zenith-player",
+	"cover": "/projects/zenith-player.jpg"
+}

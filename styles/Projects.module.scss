@@ -1,7 +1,8 @@
 @use "utils/mixins";
 
 .container {
-	width: 100%;
+	@include mixins.fluid-type(font-size, 320px, 1366px, 80%, 50%);
+	
 	height: 100vh;
 }
 
@@ -12,11 +13,122 @@
 
 .title {
 	display: block;	
-	margin: auto 0;
-	margin-top: 0.5rem;
+	margin-top: 3.5rem;
+	margin-bottom: 0;
+	@include mixins.fluid-type(margin-left, 320px, 1366px, 10%, 25%);
+	@include mixins.fluid-type(margin-right, 320px, 1366px, 10%, 25%);
 
 	font-weight: 400;
-	@include mixins.fluid-type(font-size, 320px, 1366px, 3.2rem, 6rem);
-	text-align: center;
+	@include mixins.fluid-type(font-size, 320px, 1366px, 4.8rem, 6rem);
+	text-align: left;
   font-family: 'Fira Code', monospace;
+}
+
+.header {
+	display: block;	
+	margin-top: 3.5rem;
+	margin-bottom: 0;
+	@include mixins.fluid-type(margin-left, 320px, 1366px, 10%, 25%);
+	@include mixins.fluid-type(margin-right, 320px, 1366px, 10%, 25%);
+
+	font-weight: 400;
+	color: #155088;
+	@include mixins.fluid-type(font-size, 320px, 1366px, 4rem, 5.2rem);
+	text-align: left;
+  font-family: 'Fira Code', monospace;
+}
+
+.content {
+	display: block;
+	margin-top: 10px;
+	@include mixins.fluid-type(margin-left, 320px, 1366px, 10%, 25%);
+	@include mixins.fluid-type(margin-right, 320px, 1366px, 10%, 25%);
+
+	font-weight: 400;
+	@include mixins.fluid-type(font-size, 320px, 1366px, 2.4rem, 3.2rem);
+	text-align: left;
+  font-family: 'Montserrat', sans-serif;
+
+	p {
+		padding: 1.2rem;
+		width: 100%;
+		max-width: 60rem;
+		line-height: 1.4rem;
+	}
+
+	a {
+		display: inline-block;
+		position: relative;
+		color: #343434;
+		text-decoration: none;
+		padding: 0 0.4rem;
+		margin-right: 0.8rem;
+
+		&:before, &:after {
+			will-change: transform;
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: -1;
+		}
+
+		&:before {
+			transition: 100ms ease-out 50ms;
+			@include mixins.fluid-type(transform-origin, 320px, 1366px, 0 1.2rem, 0 3rem);
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(125, 218, 255, 0.8);
+		}
+
+		&:after {
+			transition: 50ms ease-out;
+			transform: scaleX(0);
+			transform-origin: left center;
+			@include mixins.fluid-type(top, 320px, 1366px, 0.5rem, 2.15rem);
+			right: -1.2rem;
+			border: 0.6rem solid transparent;
+			border-left-color: rgba(125, 218, 255, 0.6);
+		}
+
+		@media (prefers-reduced-motion: no-preference) {
+			&:hover {
+				&:before {
+					transition: 100ms ease-out;
+					transform: scaleY(0.15);
+					background: rgba(125, 218, 255, 0.6);
+				}
+
+				&:after {
+					transition: 50ms ease-out 100ms;
+					transform: none;
+				}
+			}
+
+			&:active {
+				&:before {
+					transition: 100ms ease-in;
+					background: rgba(125, 218, 255, 0.4);
+				}
+
+				&:after {
+					transition: 100ms ease-in;
+					border-left-color: rgba(125, 218, 255, 0.4);
+				}
+			}
+		}
+	}
+
+	.meta {
+		@include mixins.fluid-type(font-size, 320px, 1366px, 1.325rem, 2.8rem);
+		@include mixins.fluid-type(text-align, 320px, 1366px, center, left);
+	}
+
+	.coverImg {
+		position: relative;
+		height: 280px;
+		width: 100%;
+		margin-top: 1.5rem;
+	}
 }

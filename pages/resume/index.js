@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 
 import Head from '../../components/Head/Head.js';
 import Navigation from '../../components/Navigation/Navigation.js';
@@ -12,9 +11,9 @@ export default function Resume() {
 			<Head title="Resume" />
 			<div className={styles.topBar}>
 				<Navigation />
-				<h1 className={styles.title}>My Resume ＼_ﾍ(ω｀●)</h1>
-				<Footer />
 			</div>
+			<h1 className={styles.title}>My Resume ＼_ﾍ(ω｀●)</h1>
+			<Footer />
 		</div>
 	)
 }

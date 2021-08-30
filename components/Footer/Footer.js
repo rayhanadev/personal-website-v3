@@ -69,7 +69,7 @@ export default function Footer() {
 						<p>Telephone: 817-470-2706</p>
 					</li>
 					<li>
-						<p>&copy; { new Date().getFullYear() } Ray Arayilakath</p>
+						<p>&copy; { new Date().getFullYear() } Ray Arayilakath. All Rights Reserved.</p>
 					</li>
 				</ul>
 			</div>

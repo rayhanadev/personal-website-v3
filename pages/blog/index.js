@@ -32,9 +32,9 @@ export default function Blog({ posts, topPosts }) {
 			<Head title="Thoughts..." />
 			<div className={styles.topBar}>
 				<Navigation />
-				<h1 className={styles.title}>Thoughts...</h1>
+				<h1 className={styles.title}><strong>Thoughts...</strong></h1>
 				<p className={styles.subtitle}>
-					A blog I've been writing since 2021 detailing my life and what's on my mind,
+					A blog I&apos;ve been writing since 2021 detailing my life and what&apos;s on my mind,
 					a culmination of {posts.length} published posts I hope you enjoy the occasional
 					reading :).
 				</p>
@@ -44,10 +44,11 @@ export default function Blog({ posts, topPosts }) {
 				{
 					topPosts.map(({ frontmatter: post, slug, views }) => {
 						return (
-							<Link href={'/blog/' + slug}>
+							<Link href={'/blog/' + slug} key={slug} passHref>
 								<div className={styles.post}>
 									<Image
 										src={post.cover ?? '/filler.jpg'}
+										alt="cover image"
 										width="100%"
 										height="280px"
 									/>
@@ -68,10 +69,11 @@ export default function Blog({ posts, topPosts }) {
 				{
 					posts.map(({ frontmatter: post, slug }) => {
 						return (
-							<Link href={'/blog/' + slug}>
+							<Link href={'/blog/' + slug} key={slug} passHref>
 								<div className={styles.post}>
 									<Image
 										src={post.bgimg ?? '/filler.jpg'}
+										alt="cover image"
 										width="100%"
 										height="280px"
 									/>

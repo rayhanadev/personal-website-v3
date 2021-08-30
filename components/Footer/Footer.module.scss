@@ -23,7 +23,7 @@
 	}
 
 	ul {
-		@include mixins.fluid-type(margin-top, 320px, 1366px, 2.5rem, 10rem);
+		@include mixins.fluid-type(margin-top, 320px, 1366px, 2rem, 10rem);
 		padding: {
 			top: 0;
 			bottom: 0;

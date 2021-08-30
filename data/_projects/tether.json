@@ -1,0 +1,10 @@
+{
+	"title": "tether",
+	"description": "A Canvas Web API game build for all platforms (mobile included) with offline support! Includes a realistic feel and addictive gameplay that'll have you coming back for more.",
+	"publishedAt": "2021-06-15",
+	"hasLink": true,
+	"link": "https://tether-game.web.app",
+	"hasCode": true,
+	"code": "https://github.com/rayhanadev/tether",
+	"cover": "/projects/tether.jpg"
+}

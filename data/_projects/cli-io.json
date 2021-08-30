@@ -1,0 +1,10 @@
+{
+	"title": "CLI.io",
+	"description": "Ever wanted to write Javascript interrupted? Then have fun with CLI.io, a multiplayer JS console where any command entered is evaluated on all connected users browsers!",
+	"publishedAt": "2020-10-31",
+	"hasLink": true,
+	"link": "https://cliio.rayhanadev.repl.co",
+	"hasCode": true,
+	"code": "https://replit.com/@RayhanADev/CLIio?v=1",
+	"cover": "/projects/cli-io.png"
+}
