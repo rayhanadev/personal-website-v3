@@ -1,5 +1,5 @@
 import db from '../../../libs/firebase.js';
-import session from '../../../lib/session.js';
+import session from '../../../libs/session.js';
 
 console.log(db)
 export default async (req, res) => {
