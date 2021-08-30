@@ -9,10 +9,21 @@ import Navigation from '../../components/Navigation/Navigation.js';
 import Footer from '../../components/Footer/Footer.js';
 import styles from '../../styles/Projects.module.scss';
 
-function ProjectCard({ data: { title, description, hasLink, link, hasCode, code, hasCover, cover }}) {
+function ProjectCard({ data: { title, description, publishedAt, hasLink, link, hasCode, code, hasCover, cover }}) {
 	return (
 		<div>
-			<h2 className={styles.header}><strong>{ title }</strong></h2>
+			<h2 className={styles.header}>
+				<strong>
+					{ title }
+					<span style={{
+						paddingLeft: '0.4rem',
+						paddingRight: '1rem'
+					}}>•</span>
+					<span style={{
+						color: '#666'
+					}}>{ new Date(publishedAt).toLocaleDateString(undefined, { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' })}</span>
+				</strong>
+			</h2>
 			<p className={styles.content}>
 				{ description }
 				<br />
@@ -29,14 +40,16 @@ function ProjectCard({ data: { title, description, hasLink, link, hasCode, code,
 					}
 					{ hasCode ? <Link href={ code }><a>Check out the Code</a></Link> : '' }
 				</div>
-				<div className={styles.coverImg}>
-					<Image
-						src={ cover ? cover : '/filler.jpg'}
-						alt='cover image'
-						layout='fill'
-						objectFit='cover'
-					/>
-				</div>
+				<Link href={ link ?? '/projects#' } passHref>
+					<div className={styles.coverImg}>
+						<Image
+							src={ cover ? cover : '/filler.jpg'}
+							alt='cover image'
+							layout='fill'
+							objectFit='cover'
+						/>
+					</div>
+				</Link>
 			</p>
 		</div>
 	)
