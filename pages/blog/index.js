@@ -46,12 +46,14 @@ export default function Blog({ posts, topPosts }) {
 						return (
 							<Link href={'/blog/' + slug} key={slug} passHref>
 								<div className={styles.post}>
-									<Image
-										src={post.cover ?? '/filler.jpg'}
-										alt="cover image"
-										width="100%"
-										height="280px"
-									/>
+									<div className={styles.coverImg}>
+										<Image
+											src={post.cover ?? '/filler.jpg'}
+											alt="cover image"
+											layout="fill"
+											objectFit="cover"
+										/>
+									</div>
 									<h3>{post.title}</h3>
 									<p>{post.description}</p>
 									<div className={styles.infoContainer}>
@@ -71,12 +73,14 @@ export default function Blog({ posts, topPosts }) {
 						return (
 							<Link href={'/blog/' + slug} key={slug} passHref>
 								<div className={styles.post}>
-									<Image
-										src={post.bgimg ?? '/filler.jpg'}
-										alt="cover image"
-										width="100%"
-										height="280px"
-									/>
+									<div className={styles.coverImg}>
+										<Image
+											src={post.cover ?? '/filler.jpg'}
+											alt="cover image"
+											layout="fill"
+											objectFit="cover"
+										/>
+									</div>
 									<h3>{post.title}</h3>
 									<p>{post.description}</p>
 									<div className={styles.infoContainer}>

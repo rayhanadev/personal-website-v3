@@ -1,4 +1,4 @@
-@use "utils/mixins";
+/.@use "utils/mixins";
 
 .container {
 	@include mixins.fluid-type(font-size, 320px, 1366px, 80%, 50%);

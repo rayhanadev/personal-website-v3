@@ -87,4 +87,68 @@
 		color: #1D72C0;
 		font-family: 'Fira Code', monospace;
 	}
+
+	a {
+		display: inline-block;
+		position: relative;
+		color: #343434;
+		text-decoration: none;
+		padding: 0 0.4rem;
+		margin-right: 0.8rem;
+
+		&:before, &:after {
+			will-change: transform;
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: -1;
+		}
+
+		&:before {
+			transition: 100ms ease-out 50ms;
+			@include mixins.fluid-type(transform-origin, 320px, 1366px, 0 1.5rem, 0 1.85rem);
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(125, 218, 255, 0.8);
+		}
+
+		&:after {
+			transition: 50ms ease-out;
+			transform: scaleX(0);
+			transform-origin: left center;
+			@include mixins.fluid-type(top, 320px, 1366px, 0.75rem, 1.1rem);
+			right: -1.2rem;
+			border: 0.6rem solid transparent;
+			border-left-color: rgba(125, 218, 255, 0.6);
+		}
+
+		@media (prefers-reduced-motion: no-preference) {
+			&:hover {
+				&:before {
+					transition: 100ms ease-out;
+					transform: scaleY(0.15);
+					background: rgba(125, 218, 255, 0.6);
+				}
+
+				&:after {
+					transition: 50ms ease-out 100ms;
+					transform: none;
+				}
+			}
+
+			&:active {
+				&:before {
+					transition: 100ms ease-in;
+					background: rgba(125, 218, 255, 0.4);
+				}
+
+				&:after {
+					transition: 100ms ease-in;
+					border-left-color: rgba(125, 218, 255, 0.4);
+				}
+			}
+		}
+	}
 }

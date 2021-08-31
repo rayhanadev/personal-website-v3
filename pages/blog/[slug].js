@@ -62,6 +62,7 @@ export default function Blog({ frontmatter, code }) {
 						src={ frontmatter.cover ?? '/filler.jpg' }
 						alt="cover image"
 						layout="fill"
+						objectFit="cover"
 					/>
 				</div>
 				<div className={styles.info}>
