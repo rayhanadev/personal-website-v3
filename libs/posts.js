@@ -26,6 +26,11 @@ export const getAllPosts = async (sort = 'newest', count) => {
 				slug: slug,
 			};
 		})
+		.filter((post) => {
+			return process.env.NODE_ENV === 'production' ? 
+				post.frontmatter.isPublished === true :
+				true
+		});
 	
 	if(sort === 'newest') {
 		return posts

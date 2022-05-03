@@ -50,13 +50,13 @@ export default function Footer() {
 			<div>
 				<ul>
 					<li>
-						<a href="https://github.com/RayhanADev">Github</a>
+						<a href="https://github.com/rayhanadev">Github</a>
 					</li>
 					<li>
 						<a href="https://polywork.com/rayhanadev">Polywork</a>
 					</li>
 					<li>
-						<a href="https://replit.com/@RayhanADev">Replit</a>
+						<a href="https://linkedin.com/in/rayhanadev">LinkedIn</a>
 					</li>
 				</ul>
 			</div>
@@ -66,7 +66,7 @@ export default function Footer() {
 						<p>Email: rayhanadev@protonmail.com</p>
 					</li>
 					<li>
-						<p>Telephone: 817-470-2706</p>
+						<p>Telephone: NA</p>
 					</li>
 					<li>
 						<p>&copy; { new Date().getFullYear() } Ray Arayilakath. All Rights Reserved.</p>
